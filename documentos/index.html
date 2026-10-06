@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentación - Protocolo PULSA++</title>
+  <title>Documentación Oficial - Protocolo PULSA++</title>
   <style>
     /* Reset & Tipografía Verdana */
     * {
@@ -53,9 +52,9 @@
       font-weight: bold;
     }
 
-    /* Navegación / Breadcrumb */
+    /* Navegación Superior */
     .top-nav {
-      max-width: 900px;
+      max-width: 1000px;
       width: 100%;
       margin: 20px auto 0 auto;
       padding: 0 20px;
@@ -79,7 +78,7 @@
     /* Contenedor Principal */
     main {
       flex: 1;
-      max-width: 900px;
+      max-width: 1000px;
       width: 100%;
       margin: 16px auto 40px auto;
       padding: 0 20px;
@@ -90,20 +89,25 @@
       border: 1px solid #cbd5e1;
       border-radius: 6px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-      padding: 40px 48px;
+      padding: 48px 56px;
     }
 
-    /* Título del Protocolo */
-    .doc-meta {
+    /* Metadatos y Encabezado */
+    .doc-meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 10px 16px;
+      border-radius: 4px;
       font-size: 0.78rem;
       color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
     }
 
     .protocol-title {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
       font-weight: bold;
       color: #0b132b;
       border-bottom: 2px solid #e2e8f0;
@@ -119,47 +123,113 @@
       font-weight: 800;
     }
 
-    /* Texto Informativo */
-    .intro-text {
-      font-size: 0.95rem;
-      color: #334155;
-      margin-bottom: 16px;
+    /* Secciones */
+    .section-h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0b132b;
+      margin-top: 32px;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #cbd5e1;
     }
 
-    /* Lista de Causas */
-    .causes-container {
+    .section-h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1c2541;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: #334155;
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    /* Cajas de Alerta e Información */
+    .alert-box {
+      background-color: #fffbebfb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #d97706;
+      padding: 16px 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+      color: #92400e;
+    }
+
+    .info-box {
       background-color: #f8fafc;
       border: 1px solid #e2e8f0;
-      border-left: 4px solid #1c2541;
-      border-radius: 0 6px 6px 0;
-      padding: 20px 24px;
-      margin: 20px 0 28px 0;
+      border-left: 4px solid #0b132b;
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px 0;
     }
 
-    .causes-list {
-      list-style-type: disc;
-      padding-left: 20px;
+    /* Listas Estructuradas */
+    .detail-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 16px 0;
     }
 
-    .causes-list li {
-      font-size: 0.92rem;
-      color: #1e293b;
-      margin-bottom: 10px;
-      font-weight: 500;
+    .detail-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: #334155;
     }
 
-    .causes-list li:last-child {
-      margin-bottom: 0;
+    .detail-list li::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      color: #1c2541;
+      font-size: 0.8rem;
+      top: 2px;
     }
 
-    /* Enlace a Detalles */
+    /* Tablas Técnicas */
+    .tech-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.85rem;
+    }
+
+    .tech-table th, .tech-table td {
+      border: 1px solid #cbd5e1;
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    .tech-table th {
+      background-color: #0b132b;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .tech-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .badge-p1 { background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 3px; font-weight: bold; }
+    .badge-p2 { background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 3px; font-weight: bold; }
+    .badge-p3 { background: #e0f2fe; color: #075985; padding: 2px 8px; border-radius: 3px; font-weight: bold; }
+
+    /* Enlace Autorreferenciado a la Propia Web */
     .details-box {
       background-color: #f0fdf4;
       border: 1px solid #bbf7d0;
       border-left: 4px solid #16a34a;
-      padding: 16px;
+      padding: 18px;
       border-radius: 4px;
-      margin-top: 24px;
+      margin-top: 28px;
       font-size: 0.9rem;
       color: #166534;
     }
@@ -175,7 +245,7 @@
       color: #0b132b;
     }
 
-    /* Pie de página */
+    /* Footer */
     footer {
       background-color: #0b132b;
       color: #94a3b8;
@@ -189,47 +259,102 @@
 </head>
 <body>
 
-  <!-- Cabecera -->
+  <!-- Cabecera Institucional -->
   <header>
     <div class="header-title">Documentación</div>
-    <div class="header-badge">ID Documento: d=1</div>
+    <div class="header-badge">Ruta: /documentos/?d=1</div>
   </header>
 
   <!-- Navegación Superior -->
   <div class="top-nav">
-    <a href="index.html" class="back-link">&larr; Volver a la página inicial</a>
+    <a href="/" class="back-link">&larr; Volver al Inicio</a>
   </div>
 
-  <!-- Contenido de Documentación -->
+  <!-- Contenido Principal -->
   <main>
     <div class="document-card">
-      <div class="doc-meta">Documentación Técnica // Ruta: /documentos/?d=1</div>
+      
+      <div class="doc-meta-bar">
+        <span><strong>NORMATIVA TÉCNICA OFICIAL</strong></span>
+        <span>ID: DOC-PULSA-01</span>
+        <span>Estado: VIGENTE</span>
+      </div>
+
       <h1 class="protocol-title">Apertura protocolo "<span class="pulsa-dark">PULSA++</span>"</h1>
 
-      <p class="intro-text">
+      <p>
         Buenas tardes, ya que hemos recibido altas tasas de error, hemos decidido abrir el <strong>Protocolo PULSA++</strong>.
       </p>
 
-      <p class="intro-text">
+      <p>
         Este protocolo tratará de dar prioridad completa a estos tipos de errores por estas causas:
       </p>
 
-      <div class="causes-container">
-        <ul class="causes-list">
-          <li>Imposibilidad de uso</li>
-          <li>Dificultad a solicitar / realizar acciones específicas</li>
-          <li>Otros.</li>
+      <!-- Detalle Extendido de Causas -->
+      <div class="info-box">
+        <h3 class="section-h3">1. Imposibilidad de uso</h3>
+        <p>Afectaciones de severidad crítica que bloquean por completo la interacción del usuario con el entorno o panel de control:</p>
+        <ul class="detail-list">
+          <li>Imposibilidad de inicio de sesión o fallos de autenticación en la plataforma.</li>
+          <li>Interfaces congeladas o menús principales que no responden a las entradas.</li>
+          <li>Caídas directas del servicio o errores 500 sostenidos al intentar cargar la aplicación.</li>
         </ul>
+
+        <h3 class="section-h3">2. Dificultad a solicitar / realizar acciones específicas</h3>
+        <p>Errores funcionales en procesos puntuales o trámites institucionales dentro del servidor:</p>
+        <ul class="detail-list">
+          <li>Timeouts o fallos de red al procesar solicitudes o enviar formularios.</li>
+          <li>Falta de respuesta en comandos ejecutados dentro del sistema de gestión.</li>
+          <li>Inconsistencia o pérdida de datos durante la confirmación de acciones.</li>
+        </ul>
+
+        <h3 class="section-h3">3. Otros</h3>
+        <p>Cualquier otra anomalía técnica no listada explícitamente pero que degrade la estabilidad operacional.</p>
       </div>
 
+      <!-- Matriz de Tiempos de Respuesta (SLA) -->
+      <h2 class="section-h2">Matriz de Atención y Tiempos de Respuesta</h2>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Causa</th>
+            <th>Nivel</th>
+            <th>Tiempo Respuesta</th>
+            <th>Acción Asignada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Imposibilidad de uso</td>
+            <td><span class="badge-p1">Prioridad Alta</span></td>
+            <td>&lt; 1 hora</td>
+            <td>Intervención directa de desarrollo</td>
+          </tr>
+          <tr>
+            <td>Dificultad en acciones</td>
+            <td><span class="badge-p2">Prioridad Media</span></td>
+            <td>&lt; 4 horas</td>
+            <td>Revisión de logs y parches</td>
+          </tr>
+          <tr>
+            <td>Otros errores</td>
+            <td><span class="badge-p3">Prioridad Normal</span></td>
+            <td>&lt; 12 horas</td>
+            <td>Evaluación en ciclo ordinario</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Enlace a la propia URL del sitio -->
       <div class="details-box">
         <strong>Detalles del protocolo pulsa:</strong><br>
-        <a href="https://pulsa.madridcityroleplay.site" class="details-link" target="_blank" rel="noopener">https://pulsa.madridcityroleplay.site</a>
+        <a href="https://pulsa.madridcityroleplay.site" class="details-link">https://pulsa.madridcityroleplay.site</a>
       </div>
+
     </div>
   </main>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer>
     Madrid City Roleplay 2 - Pulsa++
   </footer>
