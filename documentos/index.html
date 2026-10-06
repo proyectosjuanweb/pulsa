@@ -1,1 +1,238 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación - Protocolo PULSA++</title>
+  <style>
+    /* Reset & Tipografía Verdana */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+    body {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Cabecera Institucional */
+    header {
+      background-color: #0b132b;
+      color: #ffffff;
+      padding: 18px 32px;
+      border-bottom: 4px solid #1c2541;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      color: #f8fafc;
+      text-transform: uppercase;
+    }
+
+    .header-badge {
+      background-color: #1c2541;
+      border: 1px solid #3a506b;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* Navegación / Breadcrumb */
+    .top-nav {
+      max-width: 900px;
+      width: 100%;
+      margin: 20px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #3a506b;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      color: #0b132b;
+      text-decoration: underline;
+    }
+
+    /* Contenedor Principal */
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 16px auto 40px auto;
+      padding: 0 20px;
+    }
+
+    .document-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      padding: 40px 48px;
+    }
+
+    /* Título del Protocolo */
+    .doc-meta {
+      font-size: 0.78rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .protocol-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #0b132b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .pulsa-dark {
+      color: #1c2541;
+      background: linear-gradient(135deg, #0b132b 0%, #1c2541 50%, #3a506b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    /* Texto Informativo */
+    .intro-text {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 16px;
+    }
+
+    /* Lista de Causas */
+    .causes-container {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #1c2541;
+      border-radius: 0 6px 6px 0;
+      padding: 20px 24px;
+      margin: 20px 0 28px 0;
+    }
+
+    .causes-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .causes-list li {
+      font-size: 0.92rem;
+      color: #1e293b;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .causes-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Enlace a Detalles */
+    .details-box {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 4px solid #16a34a;
+      padding: 16px;
+      border-radius: 4px;
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #166534;
+    }
+
+    .details-link {
+      color: #15803d;
+      text-decoration: underline;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    .details-link:hover {
+      color: #0b132b;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #0b132b;
+      color: #94a3b8;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      border-top: 1px solid #1c2541;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    <div class="header-title">Documentación</div>
+    <div class="header-badge">ID Documento: d=1</div>
+  </header>
+
+  <!-- Navegación Superior -->
+  <div class="top-nav">
+    <a href="index.html" class="back-link">&larr; Volver a la página inicial</a>
+  </div>
+
+  <!-- Contenido de Documentación -->
+  <main>
+    <div class="document-card">
+      <div class="doc-meta">Documentación Técnica // Ruta: /documentos/?d=1</div>
+      <h1 class="protocol-title">Apertura protocolo "<span class="pulsa-dark">PULSA++</span>"</h1>
+
+      <p class="intro-text">
+        Buenas tardes, ya que hemos recibido altas tasas de error, hemos decidido abrir el <strong>Protocolo PULSA++</strong>.
+      </p>
+
+      <p class="intro-text">
+        Este protocolo tratará de dar prioridad completa a estos tipos de errores por estas causas:
+      </p>
+
+      <div class="causes-container">
+        <ul class="causes-list">
+          <li>Imposibilidad de uso</li>
+          <li>Dificultad a solicitar / realizar acciones específicas</li>
+          <li>Otros.</li>
+        </ul>
+      </div>
+
+      <div class="details-box">
+        <strong>Detalles del protocolo pulsa:</strong><br>
+        <a href="https://pulsa.madridcityroleplay.site" class="details-link" target="_blank" rel="noopener">https://pulsa.madridcityroleplay.site</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    Madrid City Roleplay 2 - Pulsa++
+  </footer>
+
+</body>
+</html>
