@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación - Protocolo PULSA++</title>
+  <style>
+    /* Reset & Tipografía Verdana */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Cabecera Institucional */
+    header {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 16px 24px;
+      border-bottom: 4px solid #1e3a8a;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #f8fafc;
+      text-transform: uppercase;
+    }
+
+    .header-badge {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* Contenedor Principal */
+    main {
+      flex: 1;
+      max-width: 800px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .document-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 36px 40px;
+    }
+
+    /* Título del Protocolo con Colores Oscuros */
+    .protocol-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 24px;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+    }
+
+    .pulsa-dark {
+      color: #1e1b4b; /* Púrpura/Azul muy oscuro */
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    /* Contenido */
+    .intro-text {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 20px;
+    }
+
+    .causes-list {
+      background-color: #f8fafc;
+      border-left: 4px solid #1e3a8a;
+      padding: 16px 20px 16px 36px;
+      margin: 20px 0 28px 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .causes-list li {
+      font-size: 0.92rem;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .causes-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Enlace y Detalles */
+    .details-box {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px dashed #cbd5e1;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .details-link {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    .details-link:hover {
+      text-decoration: underline;
+      color: #0f172a;
+    }
+
+    /* Redirección / Reenrutamiento JS */
+    .redirect-banner {
+      margin-top: 24px;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e40af;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .redirect-btn {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .redirect-btn:hover {
+      background-color: #0f172a;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.85rem;
+      border-top: 1px solid #1e293b;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    <div class="header-title">Documentación</div>
+    <div class="header-badge">Oficial</div>
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <div class="document-card">
+      <h1 class="protocol-title">Apertura protocolo "<span class="pulsa-dark">PULSA++</span>"</h1>
+
+      <p class="intro-text">
+        Buenas tardes, ya que hemos recibido altas tasas de error, hemos decidido abrir el <strong>Protocolo PULSA++</strong>.
+      </p>
+
+      <p class="intro-text">
+        Este protocolo tratará de dar prioridad completa a estos tipos de errores por estas causas:
+      </p>
+
+      <ul class="causes-list">
+        <li>Imposibilidad de uso</li>
+        <li>Dificultad a solicitar / realizar acciones específicas</li>
+        <li>Otros.</li>
+      </ul>
+
+      <div class="details-box">
+        Detalles del protocolo pulsa: 
+        <a href="https://pulsa.madridcityroleplay.site" class="details-link" target="_blank" rel="noopener">https://pulsa.madridcityroleplay.site</a>
+      </div>
+
+      <!-- Banner con redirección a /documentos/?d=1 -->
+      <div class="redirect-banner">
+        <span>Ruta de documentación: <code>/documentos/?d=1</code></span>
+        <a href="/documentos/?d=1" class="redirect-btn">Ir a docs</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Madrid City Roleplay 2 - Pulsa++
+  </footer>
+
+</body>
+</html>
